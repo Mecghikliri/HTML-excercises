@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1,p{
+            color: blue;
+            background-color: aqua;
+            margin-top: 5%;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1> Xac dinh 1 so lon hon hay nho hon 0</h1>
+<p> Nhap vao so a:</p>
+<input type="number" id="so" placeholder="nhap so vao"> <br>
+<button onclick="f()"> Kiem tra </button>
+<p id="tra_ket_qua"></p>
+<script>
+    function f() {
+        let x = document.getElementById("so").value;
+        if(x> 0){ document.getElementById("tra_ket_qua").innerHTML= " Lon hon 0"
+        }else if(x==0){
+            document.getElementById("tra_ket_qua").innerHTML = "bang 0"
+        }else{
+            document.getElementById("tra_ket_qua").innerHTML = " nho hon 0"
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: aqua;
+            background-color: deeppink;
+            margin-top: 10%;
+        }
+
+        p {
+            color: blue;
+        }
+    </style>
+</head>
+<center>
+    <body>
+    <h1> Kiểm tra a có chia hết cho b hay không </h1>
+    <p> Số a:</p>
+    <input type="number" id="so_a" placeholder="so bi chia"> <br>
+    <p> Số b:</p>
+    <input type="number" id="so_b" placeholder="so chia #0"> <br> <br>
+    <button onclick="ketqua()"> Kiem tra</button>
+    <p id="kiemtrakq"></p>
+    <script>
+        function ketqua() {
+            let x = document.getElementById("so_a").value;
+            let y = document.getElementById("so_b").value;
+            if(y == 0) {
+                document.getElementById("kiemtrakq").innerHTML = "ERROR!"
+            } else if(y != 0 && x % y == 0){
+                document.getElementById("kiemtrakq").innerHTML = " Tuyet voi @@ a chia het cho b"
+            } else{
+                document.getElementById("kiemtrakq").innerHTML = " Thong cam ! a khong chia het cho b"
+            }
+        }
+    </script>
+    </body>
+</center>
+</html>

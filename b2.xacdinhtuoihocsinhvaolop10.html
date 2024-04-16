@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            color: blue;
+            background-color: aqua;
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<center>
+    <body>
+    <h1> KIEM TRA DA DU TUOI VAO LOP 10 CHUA</h1>
+    <p> Nhap tuoi hoc sinh vao o sau</p>
+    <input type="number" id="tuoi_hs" placeholder="so tuoi"> <br><br>
+    <button onclick="tuoi()"> Kiem Tra</button>
+    <p id="xuat_tuoi"></p>
+    <script>
+        function tuoi() {
+            let x = document.getElementById("tuoi_hs").value;
+            if (x != 16) {
+                document.getElementById("xuat_tuoi").innerHTML = " KHONG DU TUOI"
+            }else{
+                document.getElementById("xuat_tuoi").innerHTML = ""
+            }
+        }
+    </script>
+    </body>
+</center>
+</html>
