@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doi nhiet do</title>
+    <style>
+        h1{
+            color: orange;
+            background-color: bisque;
+            margin-top: 5%;
+        }
+        body{
+            text-align: center;
+        }
+        p {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<h1> DOI DO C SANG DO F</h1>
+<p> Nhap do C:</p>
+<input type="number" id="so_do_C" placeholder="Nhap vao do C"> <br> <br>
+<button onclick="doinhietdo()"> Doi </button> <br> <br>
+<p id="so_do_F"></p>
+<script>
+    function doinhietdo() {
+        let dof = +document.getElementById("so_do_C").value*9/5+32;
+        document.getElementById("so_do_F").innerHTML = dof
+    }
+</script>
+</body>
+</html>

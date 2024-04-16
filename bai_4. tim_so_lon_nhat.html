@@ -27,9 +27,9 @@
 <p id="xem_ket_qua"></p>
 <script>
     function hihi() {
-        let soa = document.getElementById("so_thu_1").value;
-        let sob = document.getElementById("so_thu_2").value;
-        let soc = document.getElementById("so_thu_3").value;
+        let soa = +document.getElementById("so_thu_1").value;
+        let sob = +document.getElementById("so_thu_2").value;
+        let soc = +document.getElementById("so_thu_3").value;
         if (soa < sob && soa < soc) {
             if (sob < soc) {
                 document.getElementById("xem_ket_qua").innerHTML = "c la so lon nhat"

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doimsangfeet</title>
+    <style>
+        h1 {
+            color: red;
+            background-color: blue;
+            margin-top: 5%;
+        }
+        p {
+            color: deeppink;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1> doi m sang feet</h1>
+<p> Nhap vao m:</p>
+<input type="number" id="so_met" placeholder="nhap so met lon hon 0"><br><br>
+<button onclick="doisangfeet()">Doi sang feet</button><br>
+<p id="so_feet"></p><br>
+<script>
+    function doisangfeet() {
+        let sofeet = +document.getElementById("so_met").value*3.2808;
+        document.getElementById("so_feet").innerHTML = sofeet;
+    }
+</script>
+</body>
+</html>

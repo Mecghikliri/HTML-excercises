@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh nghiem pt</title>
+    <style>
+        h1{
+            color: red;
+            background-color: aqua;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1> tim nghiem pt bac nhat</h1>
+<p> ax+b=0 (a#0)</p>
+<p> Nhap vao a: ( khac 0)</p><br>
+<input type="number" id="he_so_a_1" placeholder="nhap a "><br><br>
+<p> Nhap vao b:</p><br>
+<input type="number" id="he_so_b_1" placeholder="Nhap b"><br><br>
+<button onclick="nghiembac1()"> Giai</button><br>
+<p id="nghiem_bac_nhat"></p>
+<h1> tim nghiem phuong trinh bac 2</h1>
+<p> ax^2+bx+c=0 (a#0)</p><br>
+<p> Nhap vao a: </p><br>
+<input type="number" id="he_so_a_2" placeholder=" nhap a "><br>
+<p> Nhap vao b: </p><br>
+<input type="number" id="he_so_b_2" placeholder=" nhap b"><br>
+<p> Nhap vao c: </p><br>
+<input type="number" id="he_so_c" placeholder="nhap c"><br><br>
+<button onclick="nghiembac2()">Giai</button><br><br>
+<p id="nghiem_bac_hai"></p><br>
+<script>
+    function nghiembac1() {
+        let hesoa1 = +document.getElementById("he_so_a_1").value;
+        let hesob1 = +document.getElementById("he_so_b_1").value;
+        if(hesoa1 === 0){
+            document.getElementById("nghiem_bac_nhat").innerHTML="phuong trinh vo nghiem"
+        }else{
+            document.getElementById("nghiem_bac_nhat").innerHTML= -hesob1/hesoa1;
+        }
+    }
+    function nghiembac2() {
+        let hesoa2= +document.getElementById("he_so_a_2").value;
+        let hesob2= +document.getElementById("he_so_b_2").value;
+        let hesoc= +document.getElementById("he_so_c").value;
+        let delta= hesob2*hesob2-4*hesoa2*hesoc;
+        let kep= -hesob2/(2*hesoa2);
+        let nghiem_1 = (-hesob2+delta**0.5)/(2*hesoa2);
+        let nghiem_2 = (-hesob2-delta**0.5)/(2*hesoa2);
+
+        if(delta<0){
+            document.getElementById("nghiem_bac_hai").innerHTML="phuong trinh vo nghiem";
+        }else if(delta === 0){
+            document.getElementById("nghiem_bac_hai").innerHTML= "nghiem kep x=" +kep
+        }else {
+            document.getElementById("nghiem_bac_hai").innerHTML= "nghiem x1="+nghiem_1+"nghiem x2="+nghiem_2;
+        }
+    }
+</script>
+</body>
+</html>

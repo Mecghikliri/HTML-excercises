@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            color: chartreuse;
+            background-color: antiquewhite;
+        }
+        p {
+            color: olive;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1> Kiem tra co phải tam giac khong</h1>
+<p> Nhap thong so canh:</p><br>
+<p> Nhap canh 1:</p><br>
+<input type="number" id="canh_1" placeholder="nhap canh 1"> <br>
+<p> Nhap canh 1:</p><br>
+<input type="number" id="canh_2" placeholder="nhap canh 2">
+<p> Nhap canh 1:</p><br>
+<input type="number" id="canh_3" placeholder="nhap canh 3"><br><br>
+<button onclick="kiemtratamgiac()"> Kiem tra</button><br>
+<p id="ket_qua_tam_giac"></p><br>
+<script>
+    function kiemtratamgiac() {
+        let canh1 = +document.getElementById("canh_1").value;
+        let canh2 = +document.getElementById("canh_2").value;
+        let canh3 = +document.getElementById("canh_3").value;
+        let canh123= canh1+canh2-canh3;
+        let canh231= canh2+canh3-canh1;
+        let canh132= canh1+canh3-canh2;
+        if(canh1 && canh2 && canh3 && (canh1+canh2)>canh3 && (canh1+canh3)>canh2 &&(canh2+canh3)>canh1){
+            document.getElementById("ket_qua_tam_giac").innerHTML="la tam giac"
+        }else{
+            document.getElementById("ket_qua_tam_giac").innerHTML="#ERROR"
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            color: orange;
+            background-color: aqua;
+
+        }
+        p {
+            color: red;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1> TINH DIEN TICH HINH VUONG</h1>
+<p> Nhap vao canh:</p><br>
+<input type="number" id="canh_hinh_vuong" placeholder="nhap canh >0"><br><br>
+<button onclick="shinhvuong()">Tinh</button>
+<p id="dientich_hv"></p><br>
+<h1> TINH DIEN TICH HINH CHU NHAT</h1>
+<p> Nhap chieu dai:</p><br>
+<input type="number" id="chieu-dai" placeholder="chieu dai"><br>
+<p> Nhap chieu rong:</p>
+<input type="number" id="chieu-rong" placeholder="chieu rong"><br><br>
+<button onclick="schunhat()"> Dien tich</button><br><br>
+<p id="dientich_hcn"></p><br>
+<h1> DIEN TICH HINH TAM GIAC VUONG</h1>
+<p> Nhap canh goc vuong 1:</p><br>
+<input type="number" id="canh-vuong-1" placeholder="canh 1"><br>
+<p> Nhap canh goc vuong 2: </p><br>
+<input typet="number" id=" canh-vuong-2" placeholder="canh 2"><br><br>
+<button onclick="stamgiacvuong()"> tinh dien tich </button><br><br>
+<p id="dientich_tamgiac"></p><br>
+<script>
+    function shinhvuong() {
+        let canhvuong = +document.getElementById("canh_hinh_vuong").value;
+        let dientichhinhvuong = canhvuong*canhvuong;
+        document.getElementById("dientich_hv").innerHTML=dientichhinhvuong;
+    }
+    function schunhat() {
+        let schunhat = +document.getElementById("chieu-dai").value*(+document.getElementById("chieu-rong").value);
+        document.getElementById("dientich_hcn").innerHTML= schunhat;
+    }
+    function stamgiacvuong() {
+        let canhvuong1 = +document.getElementById("canh-vuong-1").value;
+        let canhvuong2 =+document.getElementById(" canh-vuong-2").value;
+        let stamgiacvuong= 1/2*canhvuong1*canhvuong2;
+        document.getElementById("dientich_tamgiac").innerHTML= stamgiacvuong;
+    }
+</script>
+</body>
+</html>

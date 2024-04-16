@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baixemtuoi</title>
+    <style>
+        h1{
+            color: olivedrab;
+            background-color: ghostwhite;
+        }
+        p{
+            color: darkred;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1> kiem tra co phai tuoi nguoi khong</h1>
+<p> Nhap tuoi nguoi:</p><br>
+<input type="number" id="tuoi_nguoi" placeholder="nhap tuoi"><br><br>
+<button onclick="tuoinguoi()"> Kiem tra</button>
+<p id="thong_tin"></p>
+<script>
+    function tuoinguoi() {
+        let tuoi= +document.getElementById("tuoi_nguoi").value;
+        if( tuoi<0 ||tuoi>120){
+            document.getElementById("thong_tin").innerHTML="#ERROR#";
+        }else {
+            document.getElementById("thong_tin").innerHTML="tuoi nguoi hop le"
+        }
+    }
+</script>
+</body>
+</html>
