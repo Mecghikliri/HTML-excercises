@@ -30,22 +30,23 @@
         let soa = document.getElementById("so_thu_1").value;
         let sob = document.getElementById("so_thu_2").value;
         let soc = document.getElementById("so_thu_3").value;
-        if(soa<sob && soa<soc){
-            if(sob<soc){
-                document.getElementById("xem_ket_qua").innerHTML ="c la so lon nhat"
-            }else if( sob == soc){
+        if (soa < sob && soa < soc) {
+            if (sob < soc) {
+                document.getElementById("xem_ket_qua").innerHTML = "c la so lon nhat"
+            } else if (sob == soc) {
                 document.getElementById("xem_ket_qua").innerHTML = "b,c la so lon nhat"
-            }else{
-                document.getElementById("xem_ket_qua").innerHTML ="b la so lon nhat"
+            } else {
+                document.getElementById("xem_ket_qua").innerHTML = "b la so lon nhat"
             }
-        }else if(soa>sob && soa<soc){
+        } else if (soa > sob && soa < soc) {
             document.getElementById("xem_ket_qua").innerHTML = "c la so lon nhat"
-        }else if(soa>soc && soa<sob){
+        } else if (soa > soc && soa < sob) {
             document.getElementById("xem_ket_qua").innerHTML = " b la so lon nhat"
-        }else{
+        } else {
             document.getElementById("xem_ket_qua").innerHTML = " a la so lon nhat"
         }
     }
+
 </script>
 </body>
 </html>
