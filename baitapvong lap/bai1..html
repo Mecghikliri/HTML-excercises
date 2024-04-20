@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            color: red;
+            background-color: aqua;
+        }
+        p{
+            color: salmon;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1> In ra tong cac so chia het cho 6 tu a-b</h1>
+<p> Nhap so a:</p><br>
+<input type="number" id="so_tu_a" placeholder="Nhap so a"><br>
+<p> Nhap so b: </p><br>
+<input type="number" id="so_den_b" placeholder="Nhap so b"><br><br>
+<button onclick="tinhtong()"> Tinh tong</button><br>
+<p id="tong"></p>
+<script>
+    function tinhtong() {
+        let a= +document.getElementById("so_tu_a").value;
+        let b= +document.getElementById("so_den_b").value;
+        let tongchia6= 0;k=a;
+        for (k=a;k<b;k++){
+            if(k%2===0 && k%3===0){
+                tongchia6+=k
+            }
+        }
+        document.getElementById("tong").innerHTML= tongchia6
+    }
+</script>
+</body>
+</html>

@@ -35,7 +35,7 @@
         let canh123= canh1+canh2-canh3;
         let canh231= canh2+canh3-canh1;
         let canh132= canh1+canh3-canh2;
-        if(canh1 && canh2 && canh3 && (canh1+canh2)>canh3 && (canh1+canh3)>canh2 &&(canh2+canh3)>canh1){
+        if(canh1 > 0 && canh2 > 0 && canh3 > 0 && (canh1+canh2)>canh3 && (canh1+canh3)>canh2 &&(canh2+canh3)>canh1){
             document.getElementById("ket_qua_tam_giac").innerHTML="la tam giac"
         }else{
             document.getElementById("ket_qua_tam_giac").innerHTML="#ERROR"
