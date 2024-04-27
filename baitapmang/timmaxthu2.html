@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let bangso = [1, 2, 3, 4, 4, 5, 5, 5];
+    let maxthu1 = bangso[0];
+    let maxthu2 = bangso[1];
+    for (let i = 0; i < bangso.length; i++) {
+        if (maxthu1 < bangso[i]) {
+            maxthu1 = bangso[i];
+        }
+    }
+    for (let i = 0; i < bangso.length; i++) {
+        if (bangso[i] < maxthu1 && maxthu2 < bangso[i]) {
+            maxthu2 = bangso[i];
+        }
+    }
+
+    document.write("max thu 2 la :"+ maxthu2);
+</script>
+
+</body>
+</html>
