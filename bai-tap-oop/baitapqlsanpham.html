@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1><i>Danh Sach Dien Thoai Iphone</i></h1>
+<button onclick="XemList()">ListSP</button>
+<button onclick="themSPform()">ThemSP</button>
+<h3 id="listDS"></h3>
+
+<script>
+    let IphoneN = [
+        {
+            Ten: "Iphone6",
+            Gia: 1500
+        },
+        {
+            Ten: "Iphone7",
+            Gia: 2500
+        },
+        {
+            Ten: "Iphone8",
+            Gia: 3500
+        },
+        {
+            Ten: "Iphone11",
+            Gia: 5500
+        },
+        {
+            Ten: "Iphone12",
+            Gia: 8500
+        },
+        {
+            Ten: "Iphone13",
+            Gia: 9500
+        },
+        {
+            Ten: "Iphone13prm",
+            Gia: 10500
+        }
+    ];
+
+    function XemList() {
+        let listIphone = "";
+        for (let i = 0; i < IphoneN.length; i++) {
+            listIphone += `${IphoneN[i].Ten}&nbsp;&nbsp;&nbsp;<button onclick=""> Sua</button><br>`;
+            listIphone += `Gia:${IphoneN[i].Gia}K &nbsp;&nbsp;&nbsp;&nbsp;<button onclick="">Sua </button><br>`;
+        }
+        document.getElementById("listDS").innerHTML = listIphone;
+    }
+
+    function themSPform() {
+        let listIphone = "";
+        listIphone += `<input id="themSP" placeholder="TenSP"><br>`
+        listIphone += `<input id="themSP2" placeholder="GiaSP"><br>`
+        listIphone += `<button onclick="duaSP()">Them</button>`
+        document.getElementById("listDS").innerHTML = listIphone;
+    }
+
+    class listSPmoi
+    {
+        constructor(Ten, Gia) {
+            this.Ten = " "+ document.getElementById("themSP").value;
+            this.Gia = document.getElementById("themSP2").value;
+        }
+    }
+
+    function duaSP() {
+        IphoneN.push(listSPmoi);
+        IphoneN
+</script>
+</body>
+</html>
