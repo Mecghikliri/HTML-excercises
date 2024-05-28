@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function dem_ki_tu_hoa(z) {
+        let ki_tu_hoa = 0;
+        for (let i = 0; i < z.length; i++) {
+            if (z[i] === z[i].toUpperCase()) {
+                ki_tu_hoa++;
+            }
+        }
+        if (ki_tu_hoa > 0) {
+            return(ki_tu_hoa);
+        } else {
+            return "The Strings is not contain upper char" ;
+        }
+    }
+    document.write( dem_ki_tu_hoa("abcxyZ")+"<br>");
+    document.write( dem_ki_tu_hoa("abcdEF")+"<br>");
+    document.write( dem_ki_tu_hoa("abcdef")+"<br>");
+
+</script>
+</body>
+</html>

@@ -72,9 +72,10 @@ function AddSP(){
 function timSP(){
     let sanPhamMuonTim = document.getElementById("tim_SP").value;
     let listSPCoSan=cuaHangLoc.listSP;
+    let bang_kq=``;
     for (let i = 0; i <listSPCoSan.length ; i++) {
         if (listSPCoSan[i].Ten.includes(sanPhamMuonTim)) {
-            document.getElementById("hienThi").innerHTML = `
+            bang_kq+= document.getElementById("formCuaHang").innerHTML = `
         <table border="1">
         <tr>
             <td>${listSPCoSan[i].Ten}</td>
@@ -86,5 +87,6 @@ function timSP(){
         </table>`
         }
     }
+    document.getElementById()
 }
 showHome();

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so_nguyen= [];
+    let nhapsoluong=20;
+        for (let i = 0; i < nhapsoluong; i++) {
+            let sonhapvao=+prompt("nhap so")
+            so_nguyen.push(sonhapvao);
+        }
+    document.write(so_nguyen+"<br>");
+    let tong_chan=0;
+    let tong_le=0;
+    for (let i = 0; i <so_nguyen.length ; i++) {
+        if (i%2 === 0) {
+            tong_chan += i;
+        }
+    }
+    for (let i = 0; i < so_nguyen.length; i++) {
+        if(i%2!==0){
+            tong_le += i;
+        }
+    }
+        document.write("tong chan la"+tong_chan+"<br>" );
+        document.write("tong le la"+tong_le+"<br>" );
+        document.write(tong_chan-tong_le);
+
+
+</script>
+</body>
+</html>
